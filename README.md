@@ -36,6 +36,6 @@ This is **KEPLER 22B FORUM!!**, welcome to this great comunity where we all can 
      └── README.md
 ## IMPORTANT
 This project is based on the previous project Kepler 22b, you can explore it here ->
-- https://srlampi1001.github.io/kepler_page/
+- https://srlampi1001.github.io/kepler_page/  
 This forum is not real, it uses JSON-server and it has no plans for real deployment.  
 The version you are currently loking at is incomplete and has no functionality, Please wait until I release the last changes or, if you are locking this from the commit history, I hope you like the webpage!  
