@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <div class="auth-card">
         <h2 class="auth-title">Kepler-22b</h2>
 
@@ -30,50 +29,48 @@
                 </button>
             </li>
         </ul>
-
         <div class="tab-content">
-
             <!-- LOGIN -->
             <div class="tab-pane fade show active" id="login">
                 <form>
                     <div class="mb-3">
                         <label class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" placeholder="usuario@kepler22b.io">
+                        <input type="email" class="form-control" placeholder="usuario@kepler22b.io" data-login-email>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" placeholder="••••••••">
+                        <input type="password" class="form-control" placeholder="••••••••" data-login-password>
                     </div>
 
                     <button class="btn btn-primary w-100 mt-2">Entrar</button>
                 </form>
             </div>
-
             <!-- SIGN UP -->
             <div class="tab-pane fade" id="signup">
                 <form>
                     <div class="mb-3">
                         <label class="form-label">Nombre de usuario</label>
-                        <input type="text" class="form-control" placeholder="Explorador22b">
+                        <input type="text" class="form-control" placeholder="Explorador22b" data-signup-username>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" placeholder="usuario@kepler22b.io">
+                        <input type="email" class="form-control" placeholder="usuario@kepler22b.io" data-signup-email>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" placeholder="••••••••">
+                        <input type="password" class="form-control" placeholder="••••••••" data-signup-password>
                     </div>
-
+                    <div class="mb-3">
+                        <label class="form-label">confirmar contraseña</label>
+                        <input type="password" class="form-control" placeholder="••••••••" data-signup-confirm-password>
+                    </div>
                     <button class="btn btn-primary w-100 mt-2">Crear cuenta</button>
                 </form>
             </div>
-
         </div>
-
         <div class="auth-footer">
             Un mundo entre la luz y la sombra
         </div>
