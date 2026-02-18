@@ -1,5 +1,5 @@
 const API_URL = 'http://localhost:3000';
-export default function fetchAPI(url, options = { header: { 'Content-Type': 'application/json'}, method: 'GET' }){
+export default function fetchAPI(url, options = { headers: { 'Content-Type': 'application/json'}, method: 'GET' }){
     try{
         const response = fetch(`${API_URL}${url}`, options);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
