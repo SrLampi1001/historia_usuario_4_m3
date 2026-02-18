@@ -1,31 +1,112 @@
-# historia_usuario_4_m3
-This is **KEPLER 22B FORUM!!**, welcome to this great comunity where we all can share our thoughts on the incredible word of kepler 22b, be it to talk about the greatness of the solarium temple or the gruesome practices for ilegal minery in the shadows.
-## techs
-- Bootstrap5
-- JSON-server
-## WebPage Instalation
-- Clone this repository via the link https://github.com/SrLampi1001/historia_usuario_4_m3.git
+# Historia usuario 3 m3 – Kepler 22b Forum
+
+A simple forum webpage project built with a RESTful API using **JSON Server** to create and persist posts. This webpage is an assigment made in Riwi.
+
+This forum is set inside a context related with a previous work, called **Kepler 22b**, a world where sunlight shines on only one side of the planet all year round. The bright side is extremely hot and radiant, while the opposite side remains in eternal cold and darkness. (see the WebPage for kepler22b [here](https://srlampi1001.github.io/kepler_page/))
+
+The inhabitants of Kepler 22b have evolved into diverse forms and cultures, adapting to survive in both extreme environments. This forum allows users to share stories, knowledge, survival techniques, and cultural insights from this fascinating world.
+
+---
+
+## Kepler 22b
+
+Kepler 22b is divided into two extreme hemispheres and a terminator line:
+
+### The Bright Side (Sinteryum Kingdom)
+
+* Constant sunlight
+* High temperatures
+* Radiant landscapes and solar-adapted ecosystems
+* Civilizations adapted to heat and intense light
+
+### The Dark Side (Dartumbria Kingdom)
+
+* Permanent night
+* Freezing temperatures
+* Bioluminescent lifeforms
+* Societies adapted to cold and darkness
+
+### Midnight Twilight zone
+
+* Terminator line where the sunlight transitions into the eternal night
+* Template tempetures in the center
+* Species motherland
+* Peaceful and trading culture
+
+
+The forum is the place where you can share your opinions on this cultures! Being criticizing the absurd biology of the terrible beasts from datumbira or saying how peacefull the midnight twilight zone is.  
+
+---
+
+## 🛠 Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+* JSON Server (for RESTful API)
+* Git & GitHub
+
+---
+
+## Installation
+
+Follow these steps to run the project locally.
+- This project can't be hosted, as no express or backend language is being used, to run it, it's necessary to do it locally
+
+### Clone the Repository
+In the terminal and run:
 ```bash
-    git clone https://github.com/SrLampi1001/historia_usuario_4_m3.git
+git clone https://github.com/SrLampi1001/historia_usuario_3_m3.git
 ```
-- Install JSON-server (if you don't have it already)
+Navigate into the project folder:
 ```bash
-    npm install json-server
+cd historia_usuario_3_m3/
 ```
-- Run the db.json archive as a mock API
+---
+### Install JSON Server
+If you don’t have JSON Server installed, install it locally:
 ```bash
-    npx json-server db.json
+npm i json-server
 ```
-- Initialize the project via live server, otherwise the API won't work
-- Explore!
-## Reglament
-- **DO NOT POST HATE MESSAGES**: This comunity is meant to be chill and any type of hate messages (directed to real people or circumstances) is not going to be tolerated
-- **You need to be 18+**: The forum contains post that are not fit for underage people, so please, if you are a minor, please refrain from entering the forum
-## CRUD
-- Once you have created an account, you can comment the forum posts and create your own, we do not support any tuype of media upload, so only words can be used.
-- You can erase the posts you have published, with no time limit
-- You can add personalice the information in your profile and select from the assests list any profile image you may desire.
-- Explore the different forum sections with a dark and cozy interface, or a light and bright one
+Alternatively, you can install it globally:
+
+```bash
+npm i -g json-server
+```
+---
+
+### Start the REST API
+
+make sure you are inside the historia_usuario_3_m3/ folder, and run the following command:
+```bash
+json-server --watch db/db.json --port 3000
+```
+Alternatively, you can run the command:
+```bash
+npx json-server db/db.json
+```
+The API will be available at:
+
+```
+http://localhost:3000
+```
+
+endpoints:
+
+```
+http://localhost:3000/posts     #posts endpoint
+http://localhost:3000/users     #users endpoint
+```
+
+---
+
+### Run the Project
+
+Open the `index.html` file in your browser using any live server. (else, neither the posting nor the session will work)  
+
+If you're using VS Code, you can use the **Live Server** extension.
+
+---
 ## Folder Structure
      HISTORIA_USUARIO_4_M3/
      ├── js/        #currently empty
@@ -34,8 +115,39 @@ This is **KEPLER 22B FORUM!!**, welcome to this great comunity where we all can 
      ├── styles.css
      ├── forum.css
      └── README.md
-## IMPORTANT
-This project is based on the previous project Kepler 22b, you can explore it here ->
-- https://srlampi1001.github.io/kepler_page/  
-This forum is not real, it uses JSON-server and it has no plans for real deployment.  
-The version you are currently loking at is incomplete and has no functionality, Please wait until I release the last changes or, if you are locking this from the commit history, I hope you like the webpage!  
+     
+## API Endpoints
+
+| Method | Endpoint   | Description            |
+| ------ | ---------- | ---------------------- |
+| GET    | /posts     | Retrieve all posts     |
+| GET    | /posts/:id | Retrieve a single post |
+| POST   | /posts     | Create a new post      |
+| PUT    | /posts/:id | Update a post          |
+| DELETE | /posts/:id | Delete a post          |
+
+---
+
+## Features
+
+* Create an account
+* Create new forum posts
+* View all posts
+* Edit your existing posts
+* Delete your posts
+* Data persistence using JSON Server and Local Storage
+
+---
+
+## Future Improvements
+
+* Comments on posts
+* Categories based on planet hemisphere
+* Dark/Bright side theme toggle
+* Deployment to a hosting platform
+
+---
+
+## 📄 License
+
+This project is for educational purposes.
