@@ -1,8 +1,8 @@
 import fetchAPI from "./fetch.js";
 
-async function log_auth(username, password){
+async function log_auth(email, password){
     let securePassword = encodeURIComponent(password);
-    let secureEmail = encodeURIComponent(username.trim().toLowerCase());
+    let secureEmail = encodeURIComponent(email.trim().toLowerCase());
     try{
         const response = await fetchAPI(`/users?email=${secureEmail}&password=${securePassword}`);
         if(response instanceof Error) throw response;
