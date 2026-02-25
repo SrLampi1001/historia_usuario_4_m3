@@ -35,15 +35,14 @@
                     <h5 class="mb-0 fw-bold">Inicio</h5>
                 </div>
                 <!-- Create Post -->
-                <div class="post">
-                    <div class="d-flex justify-content-between">
-                        <strong>Archivista Solar</strong>
-                        <span class="badge badge-day">Día eterno</span>
-                    </div>
-                    <p class="mt-2 mb-1">
-                        Las ciudades del hemisferio iluminado han comenzado a migrar hacia el
-                        cinturón crepuscular. ¿Estamos presenciando el inicio de una nueva era?
-                    </p>
+                <div class="post mb-4">
+                    <form id="newPostForm" class="d-flex flex-column gap-2">
+                        <label class="fw-medium" for="postTitle">Título</label>
+                        <input type="text" id="postTitle" class="form-control bg-transparent text-white border-light" placeholder="Escribe el título…"required>
+                        <label class="fw-medium" for="postContent">Contenido</label>
+                        <textarea id="postContent" rows="4" class="form-control bg-transparent text-white border-light" placeholder="Escribe tu mensaje aquí…" required></textarea>
+                        <button type="submit" class="btn btn-sm w-auto align-self-end" style="background:#ffd86f;color:#0b1020;border:none;"> Publicar </button>
+                    </form>
                 </div>
                 <!-- POST -->
                 <div class="post">
