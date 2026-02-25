@@ -25,7 +25,7 @@ async function sign_auth(name, email, password){
     let secureEmail = encodeURIComponent(email.trim().toLowerCase());
     let secureName = encodeURIComponent(name)
     try{
-        const response = await fetchAPI(`/users`, {headers:{"Content-Type":"application/json"}, method:"POST", body:stringify({
+        const response = await fetchAPI(`/users`, {headers:{"Content-Type":"application/json"}, method:"POST", body: JSON.stringify({
             "name":secureName,
             "email":secureEmail,
             "password":securePassword
