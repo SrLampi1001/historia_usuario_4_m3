@@ -1,15 +1,11 @@
-export const URL = "http://localhost:3000"
-const JSONFetch = async (path, options = {}) => {
-    const res = await fetch(`${API}${path}`, {
-        headers: { "Content-Type": "application/json", ...(options.headers || {}) },
-        ...options
-    });
-    if (!res.ok) {
-        //useful error message for debugging
-        const body = await res.text().catch(() => "");
-        throw new Error(`Request failed: ${options.method || "GET"} ${path} (${res.status}) ${body}`);
+export const API_URL = 'http://localhost:3000';
+export default function fetchAPI(url, options = { headers: { 'Content-Type': 'application/json'}, method: 'GET' }){
+    try{
+        const response = fetch(`${API_URL}${url}`, options);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return response.json();
+    } catch(error){
+        console.error(error);
+        return error;
     }
-    const text = await res.text();
-    return text ? JSON.parse(text) : null;
 }
-export default JSONFetch;
