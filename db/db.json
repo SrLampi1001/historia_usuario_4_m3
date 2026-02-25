@@ -1,18 +1,42 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "name": "John Doe",
-            "email": "john.doe@example.com",
-            "password": "hashed_password"
-        }
-    ],
-    "posts": [
-        {
-            "id": "1",
-            "userId": "1",
-            "title": "Hello World",
-            "content": "This is my first post!"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "hashed_password"
+    },
+    {
+      "id": "43e7",
+      "name": "annonymus",
+      "email": "user@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": "e8ce",
+      "name": "annonymus",
+      "email": "corre@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": "54aa",
+      "name": "annonymus",
+      "email": "mail@corr.com",
+      "password": "123456"
+    },
+    {
+      "id": "6a05",
+      "name": "user",
+      "email": "user2@mail.com",
+      "password": "123456"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "userId": "1",
+      "title": "Hello World",
+      "content": "This is my first post!"
+    }
+  ]
 }
