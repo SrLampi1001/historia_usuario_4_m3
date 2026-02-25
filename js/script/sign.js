@@ -1,5 +1,6 @@
 import {log_auth, sign_auth} from "../utils/log_auth.js"
 import {sanytizeString} from "../utils/funcs.js"
+import User from "../models/User.js"
 let sesion = "#login";
 const opt = async ()=>{
     const state = document.querySelector('.active')
@@ -13,7 +14,7 @@ const log_in = async ()=>{
     let passwordValue = sanytizeString(password.value)
     let emailValue =  sanytizeString(email.value)
     const user = await log_auth(emailValue, passwordValue)
-    return user;
+    return user[0];
 }
 const sign_in = async ()=>{
     const username = document.querySelector("[data-signup-username]");
@@ -36,14 +37,16 @@ document.addEventListener('submit', async (e)=>{
     e.preventDefault()
     try{
         if(sesion === "#login"){
-            const user = await log_in();
-            console.log(user)
+            const user = await User.constructUser(await log_in());
+            user.logIn()
+
         } else{
-            const user = await sign_in();
-            console.log(user)
+            const user = await User.constructUser(await sign_in());
+            user.logIn()
         }
     } catch (error){
         console.error(error)
         return null;
     }
+    location.href = "index.html"
 })

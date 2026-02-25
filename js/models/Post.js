@@ -5,7 +5,7 @@ export default class Post{
         this.contents = contents;
         this.id = id;
     }
-    static constructPost({title, contents, id}){
+    static async constructPost({title, contents, id}){
         try{
             if(!title||!contents||!id)throw new Error("Error, not al params given")
             return new Post(title, contents, id)

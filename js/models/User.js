@@ -8,7 +8,7 @@ export default class User {
         this.posts = posts;
         this.id = id;
     }
-    async constructUser({name, email, password, posts, id}){
+    static  async constructUser({name, email, password, posts, id}){
         try{
             if(!name || !email || !password || !id ) throw new Error("Error, not al params given")
             return new User(name, email, password, posts||[], id)
