@@ -8,7 +8,7 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="./forum.css">
+    <link rel="stylesheet" href="./css/forum.css">
 </head>
 
 <body>
@@ -34,43 +34,22 @@
                 <div class="feed-header p-3">
                     <h5 class="mb-0 fw-bold">Inicio</h5>
                 </div>
-
+                <!-- Create Post -->
+                <div class="post mb-4">
+                    <form id="newPostForm" class="d-flex flex-column gap-2">
+                        <label class="fw-medium" for="postTitle">Título</label>
+                        <select class="form-control bg-transparent border-light text-secondary" id="postTitle">
+                            <option value="default" selected disabled></option>
+                            <option value="Día eterno">Día eterno</option>
+                            <option value="Noche eterna">Noche eterna</option>
+                            <option value="Crepúsculo">Crepúsculo</option>
+                        </select>
+                        <label class="fw-medium" for="postContent">Contenido</label>
+                        <textarea id="postContent" rows="4" class="form-control bg-transparent text-white border-light" placeholder="Escribe tu mensaje aquí…" required></textarea>
+                        <button type="submit" class="btn btn-sm w-auto align-self-end" style="background:#ffd86f;color:#0b1020;border:none;"> Publicar </button>
+                    </form>
+                </div>
                 <!-- POST -->
-                <div class="post">
-                    <div class="d-flex justify-content-between">
-                        <strong>Archivista Solar</strong>
-                        <span class="badge badge-day">Día eterno</span>
-                    </div>
-                    <p class="mt-2 mb-1">
-                        Las ciudades del hemisferio iluminado han comenzado a migrar hacia el
-                        cinturón crepuscular. ¿Estamos presenciando el inicio de una nueva era?
-                    </p>
-                    <small class="text-muted">Hace 2 horas · Categoría: Política Solar</small>
-                </div>
-
-                <div class="post">
-                    <div class="d-flex justify-content-between">
-                        <strong>Vigía Nocturno</strong>
-                        <span class="badge badge-night">Noche eterna</span>
-                    </div>
-                    <p class="mt-2 mb-1">
-                        Se han detectado señales térmicas bajo el hielo profundo. Algo se mueve
-                        en la oscuridad… y no es natural.
-                    </p>
-                    <small class="text-muted">Hace 5 horas · Categoría: Criaturas</small>
-                </div>
-
-                <div class="post">
-                    <div class="d-flex justify-content-between">
-                        <strong>Caminante del Umbral</strong>
-                        <span class="badge badge-twilight">Crepúsculo</span>
-                    </div>
-                    <p class="mt-2 mb-1">
-                        El equilibrio del cinturón es frágil. La luz avanza, la noche resiste.
-                        ¿Qué pasará si uno domina al otro?
-                    </p>
-                    <small class="text-muted">Ayer · Categoría: Filosofía</small>
-                </div>
 
             </main>
 
@@ -98,7 +77,8 @@
 
         </div>
     </div>
-
+<script src="./js/script/guard.js"></script>
+<script src="./js/script/forum.js" type="module"></script>
 </body>
 
 </html>
