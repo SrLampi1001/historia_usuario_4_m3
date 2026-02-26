@@ -38,7 +38,12 @@
                 <div class="post mb-4">
                     <form id="newPostForm" class="d-flex flex-column gap-2">
                         <label class="fw-medium" for="postTitle">Título</label>
-                        <input type="text" id="postTitle" class="form-control bg-transparent text-white border-light" placeholder="Escribe el título…"required>
+                        <select class="form-control bg-transparent border-light text-secondary" id="postTitle">
+                            <option value="default" selected disabled></option>
+                            <option value="Día eterno">Día eterno</option>
+                            <option value="Noche eterna">Noche eterna</option>
+                            <option value="Crepúsculo">Crepúsculo</option>
+                        </select>
                         <label class="fw-medium" for="postContent">Contenido</label>
                         <textarea id="postContent" rows="4" class="form-control bg-transparent text-white border-light" placeholder="Escribe tu mensaje aquí…" required></textarea>
                         <button type="submit" class="btn btn-sm w-auto align-self-end" style="background:#ffd86f;color:#0b1020;border:none;"> Publicar </button>
@@ -105,6 +110,7 @@
         </div>
     </div>
 <script src="./js/script/guard.js"></script>
+<script src="./js/script/forum.js" type="module"></script>
 </body>
 
 </html>

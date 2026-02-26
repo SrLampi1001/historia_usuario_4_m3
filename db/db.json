@@ -10,7 +10,10 @@
       "id": "43e7",
       "name": "annonymus",
       "email": "user@mail.com",
-      "password": "123456a"
+      "password": "123456a",
+      "posts": [
+        "2cd0"
+      ]
     },
     {
       "id": "e8ce",
@@ -37,6 +40,11 @@
       "userId": "1",
       "title": "Hello World",
       "content": "This is my first post!"
+    },
+    {
+      "id": "2cd0",
+      "title": "Día eterno",
+      "contents": "Post"
     }
   ]
 }

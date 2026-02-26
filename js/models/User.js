@@ -8,7 +8,7 @@ export default class User {
         this.posts = posts;
         this.id = id;
     }
-    static  async constructUser({name, email, password, posts, id}){
+    static async constructUser({name, email, password, posts, id}){
         try{
             if(!name || !email || !password || !id ) throw new Error("Error, not al params given")
             return new User(name, email, password, posts||[], id)
@@ -26,14 +26,26 @@ export default class User {
     async removeAccout(){
         try{
             const response = await fetchAPI(`/users/${this.id}`,{method:"DELETE"})
-            if(!response.ok)throw new Error("Error, ", response.status)
             return response;
         } catch(error){
             console.error(error)
             return error;
         }
     }
-    async post(){
-
+    async post(post_id){
+        this.posts.push(post_id)
+        try{
+            const response = await fetchAPI(`/users/${this.id}`,{
+                method:"PATCH",
+                headers:{"Content-Type":"application/json"},
+                body:JSON.stringify({
+                    posts: this.posts
+                })
+            })
+            return response
+        } catch(error){
+            console.error(error)
+            return error
+        }
     }
 }
