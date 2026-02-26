@@ -6,10 +6,10 @@ export default class Post{
         this.contents = contents;
         this.id = id;
     }
-    static async constructPost({title, contents, id}){
+    static async constructPost({title, contents, userName, id}){
         try{
-            if(!title||!contents||!id)throw new Error("Error, not all params given")
-            return new Post(title, contents, id)
+            if(!title||!contents||!userName||!id)throw new Error("Error, not all params given")
+            return new Post(title, contents, userName, id)
         } catch(error){
             console.error(error);
             return error
@@ -25,16 +25,25 @@ export default class Post{
             this.contents = contents;
         }
     }
-    static async createPost({title, contents}){
+    static async createPost({title, contents, userName}){
         try{
             const response = await fetchAPI("/posts/", {
                 headers:{"Content-Type":"application/json"},
                 method:"POST",
-                body: JSON.stringify({title, contents})
+                body: JSON.stringify({title, contents, userName})
             })
             return Post.constructPost(response)
         } catch(error){
             console.error(error)
+        }
+    }
+    static async getAllPosts(){
+        try{
+            const response = await fetchAPI("/posts/");
+            return response;
+        } catch(error){
+            console.error(error)
+            return error
         }
     }
 }

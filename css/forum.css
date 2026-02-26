@@ -39,14 +39,14 @@ a {
 .post:hover {
   background-color: rgba(255,255,255,0.04);
 }
-.badge-day {
+.badge-díaeterno {
   background-color: #ffd86f;
   color: #0b1020;
 }
-.badge-night {
+.badge-nocheeterna {
   background-color: #6f7dff;
 }
-.badge-twilight {
+.badge-crepúsculo {
   background-color: #6fffd2;
   color: #0b1020;
 }
